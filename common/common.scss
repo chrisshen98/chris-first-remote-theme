@@ -1,14 +1,13 @@
-.hello-world-banner {
-    height: 300px;
-    width: 100%;
-    background: red;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 1em;
-}
-
-.hello-world {
-    font-size: 8em;
-    color: white;
+.topic-body {
+  // this ensures consistent top margin on topic posts even if the first line of a post
+  // is a top-margin-less element like a list or image.
+  .regular {
+    margin-top: 15px;
+  }
+  //this is what i've changed
+  margin-top: 10px;
+  box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16),0 0 0 0 rgba(0,0,0,0.12);
+   padding: 15px 20px 0 20px;
+   float: relative;
+   border-radius: 4px;
 }
