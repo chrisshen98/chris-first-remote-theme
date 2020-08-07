@@ -1,9 +1,4 @@
 .topic-body {
-  // this ensures consistent top margin on topic posts even if the first line of a post
-  // is a top-margin-less element like a list or image.
-  .regular {
-    margin-top: 15px;
-  }
   margin-top: 10px;
   box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16),0 0 0 0 rgba(0,0,0,0.12);
   padding: 15px 20px 0 20px;
@@ -15,10 +10,6 @@
 .topic-avatar {
   border-top: none;
   border-bottom: none;
-  padding-top: 15px;
-  width: 45px;
-  float: left;
-  z-index: 2;
 }
 
 .small-action {
