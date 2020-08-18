@@ -3,7 +3,7 @@ const { iconNode } = require("discourse-common/lib/icon-library");
 api.decorateWidget('header-icons:before', helper => {
     return helper.h('li', [
         helper.h('a#home-button.icon', {
-            href:'/u/chris_shen/messages',
+            href:'/messages',
             title: 'Messages'
         }, iconNode('envelope')),
     ]);
