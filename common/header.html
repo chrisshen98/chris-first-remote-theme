@@ -9,3 +9,15 @@ api.decorateWidget('header-icons:before', helper => {
     ]);
 });
 </script>
+
+<script type="text/discourse-plugin" version="0.4">
+const { iconNode } = require("discourse-common/lib/icon-library");
+api.decorateWidget('header-icons:before', helper => {
+    return helper.h('li', [
+        helper.h('a#home-button.icon', {
+            href:'https://meta.discourse.org/my/message',
+            title: 'Messages'
+        }, iconNode('envelope')),
+    ]);
+});
+</script>
