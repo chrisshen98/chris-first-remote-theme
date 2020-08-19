@@ -6,8 +6,6 @@ api.decorateWidget('header-icons:before', helper => {
         helper.h('a#home-button.icon', {
             href:'${this.attrs.path}/notifications',
             title: 'Notifications',
-            action: UserMenuAction.QUICK_ACCESS,
-            actionParam: QuickAccess.NOTIFICATIONS
         }, iconNode('bell')),
     ]);
 });
