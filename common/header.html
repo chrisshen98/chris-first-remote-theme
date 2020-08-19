@@ -4,9 +4,29 @@ const { iconNode } = require("discourse-common/lib/icon-library");
 api.decorateWidget('header-icons:before', helper => {
     return helper.h('li', [
         helper.h('a#home-button.icon', {
-            href:'${this.attrs.path}/notifications',
+            href:'https://meta.discourse/my/notifications',
             title: 'Notifications',
         }, iconNode('bell')),
     ]);
 });
 </script>
+
+
+import { createWidget } from "discourse/widgets/widget";
+import hbs from "discourse/widgets/hbs-compiler";
+
+export default createWidget("post-placeholder", {
+  tagName: "article.placeholder",
+  template: hbs`
+    <div class='row'>
+      <div class='topic-avatar'>
+        <div class='placeholder-avatar'></div>
+      </div>
+      <div class='topic-body'>
+        <div class='placeholder-text'></div>
+        <div class='placeholder-text'></div>
+        <div class='placeholder-text'></div>
+      </div>
+    </div>
+  `
+});
