@@ -1,10 +1,14 @@
+
 <script type="text/discourse-plugin" version="0.4">
+const { iconNode } = require("discourse-common/lib/icon-library");
 api.decorateWidget('header-icons:before', helper => {
     return helper.h('li', [
         helper.h('a#home-button.icon', {
-            href:'https://www.google.com/',
-            title: 'Google'
-        }, helper.h('i.fa.fa-arrow-circle-up.home-button-icon.d-icon')),
+            href:'${this.attrs.path}/notifications',
+            title: 'Notifications',
+            action: UserMenuAction.QUICK_ACCESS,
+            actionParam: QuickAccess.NOTIFICATIONS
+        }, iconNode('bell')),
     ]);
 });
 </script>
