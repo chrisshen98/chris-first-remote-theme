@@ -44,17 +44,6 @@ createWidget("user-menu-links", {
     };
   },
 
-  messagesGlyph() {
-    return {
-      action: UserMenuAction.QUICK_ACCESS,
-      actionParam: QuickAccess.MESSAGES,
-      label: "user.private_messages",
-      className: "user-pms-link",
-      icon: "envelope",
-      href: `${this.attrs.path}/messages`
-    };
-  },
-
   linkHtml(link) {
     if (this.isActive(link)) {
       link = this.markAsActive(link);
@@ -87,9 +76,7 @@ createWidget("user-menu-links", {
     glyphs.push(this.notificationsGlyph());
     glyphs.push(this.bookmarksGlyph());
 
-    if (this.siteSettings.enable_personal_messages || this.currentUser.staff) {
-      glyphs.push(this.messagesGlyph());
-    }
+    
 
     return h("ul.menu-links-row", [
       links.map(l => h("li.user", this.linkHtml(l))),
