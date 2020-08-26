@@ -4,9 +4,7 @@ api.decorateWidget('header-icons:before', helper => {
     return helper.h('li', [
         helper.h('a#home-button.icon', {
             href:'https://meta.discourse.org/my/notifications',
-            title: 'Notification',
-            action: UserMenuAction.QUICK_ACCESS,
-            actionParam: QuickAccess.NOTIFICATIONS
+            title: 'Notification'
         }, iconNode('bell')),
     ]);
 });
